@@ -7,6 +7,7 @@ import 'package:myapp/screens/animatsidThema.dart';
 import 'package:myapp/screens/animetinPosen.dart';
 import 'package:myapp/screens/home_page.dart';
 import 'package:myapp/screens/teks.dart';
+import 'package:myapp/screens/uyishi_tugma.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AniSwitcher()
+      home:MyApp(),
     );
   }
 }
