@@ -1,7 +1,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:myapp/screens/aminetid.dart';
+import 'package:myapp/screens/animSwich.dart';
 import 'package:myapp/screens/animatedPhysica.dart';
+import 'package:myapp/screens/animatsidThema.dart';
 import 'package:myapp/screens/animetinPosen.dart';
 import 'package:myapp/screens/home_page.dart';
 import 'package:myapp/screens/teks.dart';
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AniPosition(),
+      home: AniSwitcher()
     );
   }
 }
