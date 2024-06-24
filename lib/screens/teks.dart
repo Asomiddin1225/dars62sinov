@@ -1,17 +1,17 @@
 
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class TextHome extends StatefulWidget {
+  const TextHome({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<TextHome> createState() => _TextHomeState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _TextHomeState extends State<TextHome> {
  
-  bool isBig=false;
   
+  bool _isHiglighted=false;
 
  
 
@@ -25,18 +25,19 @@ class _HomePageState extends State<HomePage> {
       body: 
       
       Center(
-        child: AnimatedContainer(
-          
-          width:isBig ?200:100,
-          height:isBig ?200:100,
-          color:isBig ? Colors.red :Colors.blue,
-          duration: Duration(seconds: 1),),
+        child: AnimatedDefaultTextStyle
+        (style: _isHiglighted
+        ?TextStyle(fontSize: 50,color: Colors.red):
+        TextStyle(fontSize: 30,color: Colors.black),
+        
+        duration: Duration(seconds: 1),
+        child: Text("Hello,Flutter"),)
           
       ),
       floatingActionButton: FloatingActionButton(
         
         onPressed: () {
-          isBig=!isBig;
+          _isHiglighted=!_isHiglighted;
           setState(() {
             
           });
